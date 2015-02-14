@@ -30,7 +30,7 @@ EmissionsLA<-aggregate(Emissions~year,data=MotorData2,FUN=sum,na.rm=T)
 EmissionsLA$Location<-"LA"
 CombinedData<-rbind(EmissionsBalt,EmissionsLA)
 
-#Draw a barplot
+#Draw a ggplot
 library(ggplot2)
 png("plot6.png",height=480,width=480)
 print(ggplot(CombinedData,
